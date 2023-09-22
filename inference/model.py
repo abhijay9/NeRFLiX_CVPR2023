@@ -3,7 +3,7 @@ warnings.filterwarnings("ignore")
 import sys 
 
 # sys.path.append('/newdata/kunzhou/project/rendering/NeRFLiX_package')
-sys.path.append('/src/NeRFLiX_CVPR2023')
+# sys.path.append('/src/NeRFLiX_CVPR2023')
 
 import torch
 import torch.nn as nn
@@ -18,11 +18,15 @@ import torch.nn as nn
 import torch.nn.init as init
 import functools
 import torch.nn.functional as F
-from utils.modules.basic_conv import *
+# from utils.modules.basic_conv import *
+from NeRFLiX_CVPR2023.utils.modules.basic_conv import *
 
-from Sep_STS_Encoder import SepSTSLayer # patch-wise aggregation module
+# from Sep_STS_Encoder import SepSTSLayer # patch-wise aggregation module
+from NeRFLiX_CVPR2023.inference.Sep_STS_Encoder import SepSTSLayer # patch-wise aggregation module
+
 # from libs.dcnv2.dcn_v2 import * # for 3090 # pixel-wise aggregation with DCNs
-from libs.DCNv2_latest.dcn_v2 import * 
+# from libs.DCNv2_latest.dcn_v2 import * 
+from NeRFLiX_CVPR2023.libs.DCNv2_latest.dcn_v2 import * 
 
 class DCN_sep(DCNv2):
     '''Use other features to generate offsets and masks'''

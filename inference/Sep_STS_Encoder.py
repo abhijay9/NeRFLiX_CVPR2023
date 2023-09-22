@@ -1,6 +1,6 @@
 import torch.nn as nn
-from Sep_STS_Layer import SepSTSBasicLayer
-
+# from Sep_STS_Layer import SepSTSBasicLayer
+from NeRFLiX_CVPR2023.inference.Sep_STS_Layer import SepSTSBasicLayer
 
 class BasicStem(nn.Sequential):
     """The default conv-batchnorm-relu stem
